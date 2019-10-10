@@ -82,6 +82,30 @@ begin
 	
 	END PROCESS transition;
 
+	-- FETCH2
+	ir_en <= '1' WHEN s_cur_state = FETCH2 ELSE '0';
+	pc_en <= '1' WHEN s_cur_state = FETCH2 ELSE '0';
+	-- R_OP and I_OP
+	imm_signed <= '1' WHEN s_cur_state = I_OP or s_cur_state = STORE or s_cur_state = LOAD1 ELSE '0';
+	rf_wren <= '1' WHEN s_cur_state = I_OP or s_cur_state = R_OP or s_cur_state = LOAD2 ELSE '0';
+	-- R_OP and STORE
+	sel_b <= '1' WHEN s_cur_state = R_OP or s_cur_state = STORE  ELSE '0';
+	sel_rC <= '1' WHEN s_cur_state = R_OP ELSE '0';
+	--LOAD1
+	sel_addr <= '1' WHEN s_cur_state = LOAD1 or s_cur_state = STORE ELSE '0';
+	read <= '1' WHEN s_cur_state = LOAD1 ELSE '0';
+	--LOAD2
+	sel_mem <= '1' WHEN s_cur_state = LOAD2 ELSE '0';
+	--STORE
+	write <= '1' WHEN s_cur_state = STORE ELSE '0';
+	
+	
+	
+	
+	
+  
+
+
 	
 			
 			

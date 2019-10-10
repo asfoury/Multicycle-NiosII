@@ -1,0 +1,104 @@
+Time: 2.5 ns Input File Line: 5
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 7.5 ns Input File Line: 7
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 12.5 ns Input File Line: 7
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 12.5 ns Input File Line: 7
+* Error: pc_add_imm = 'U' instead of '0'.
+ Before the Execute states, PC must be incremented of 4.
+
+Time: 12.5 ns Input File Line: 7
+* Error: pc_sel_a = 'U' instead of '0'.
+ Before the Execute states, PC must be incremented of 4.
+
+Time: 12.5 ns Input File Line: 7
+* Error: pc_sel_imm = 'U' instead of '0'.
+ Before the Execute states, PC must be incremented of 4.
+
+Time: 12.5 ns Input File Line: 7
+* Error: read = '0' instead of '1'.
+ Before activating ir_en, read has to be activated.
+
+Time: 17.5 ns Input File Line: 8
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 22.5 ns Input File Line: 9
+* Error: op_alu = '000000' instead of '100001'.
+ Verify the op_alu generation.
+
+Time: 22.5 ns Input File Line: 9
+* Error: branch_op = 'U' instead of '0'.
+ During R_OP, branch_op has to be 0.
+
+Time: 22.5 ns Input File Line: 9
+* Error: sel_pc = 'U' instead of '0'.
+ During R_OP, sel_pc has to be 0.
+
+Time: 22.5 ns Input File Line: 9
+* Error: sel_ra = 'U' instead of '0'.
+ During R_OP, sel_ra has to be 0.
+
+Time: 22.5 ns Input File Line: 9
+* Error: rf_wren = '0' instead of '1'.
+ During R_OP, rf_wren has to be 1.
+
+Time: 22.5 ns Input File Line: 9
+* Error: sel_rC = '0' instead of '1'.
+ During R_OP, sel_rC has to be 1.
+
+Time: 22.5 ns Input File Line: 9
+* Error: sel_b = '0' instead of '1'.
+ During R_OP, sel_b has to be 1.
+
+Time: 27.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 32.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 37.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 42.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 47.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 52.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 57.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 62.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 67.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 72.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
+Time: 77.5 ns Input File Line: 11
+* Error: branch_op = 'U' instead of '0'.
+ During FETCH, branch_op has to be 0.
+
