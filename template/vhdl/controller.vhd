@@ -40,9 +40,9 @@ architecture synth of controller is
 	TYPE stateType IS (FETCH1, FETCH2, DECODE, R_OP, I_OP, STORE, BREAK, LOAD1, LOAD2);
 	SIGNAL s_cur_state, s_next_state : stateType;
 begin
-	op_alu <= "100001" WHEN op = X"3A" and opx = X"0E" else
-			  "110011" WHEN op= X"3A"  and opx = X"1B" else
-			  "000000" WHEN (op = X"04" or op=X"17" or op = X"15")
+	op_alu <= "100001" WHEN op = "111010" and opx = "001110" else
+			  "110011" WHEN op= "111010"  and opx = "011011" else
+			  "000000" WHEN (op = "000010" or op="010111" or op = "000101")
 		else "000000";
 	
 	dff : process(clk, reset_n) IS
@@ -55,22 +55,19 @@ begin
 	END if;
 	end process dff;
 
-	transition : process(s_cur_state, op, opx) IS
+	transition : process(s_cur_state, op, opx,s_next_state) IS
 	BEGIN 
 		CASE (s_cur_state) IS
 		WHEN FETCH1 => s_next_state <= FETCH2;
 		
 		WHEN FETCH2 => s_next_state <= DECODE;
 		
-		WHEN DECODE => 
-		if(op = X"3A" and opx = X"0E") THEN s_next_state <= R_OP; 
-		else if(op= X"3A"  and opx = X"1B") THEN s_next_state <= R_OP;
-		else if(op = X"04") THEN s_next_state <= I_OP;
-		else if(op = X"17") THEN s_next_state <= LOAD1;
-		else if(op = X"15") THEN s_next_state <= STORE;
-		else if(op= X"3A" and opx =X"34") THEN s_next_state <= BREAK;
-		end if;
-		end if; end if; end if; end if; end if;
+		WHEN DECODE => if(op = "111010" and opx = "001110") THEN s_next_state <= R_OP; end if;
+		 if(op= "111010"  and opx = "011011") THEN s_next_state <= R_OP; end if;
+		 if(op = "000100") THEN s_next_state <= I_OP; end if;
+		 if(op = "010111") THEN s_next_state <= LOAD1; end if;
+		 if(op = "010101") THEN s_next_state <= STORE; end if;
+		 if(op= "111010" and opx ="110100") THEN s_next_state <= BREAK; end if;
 		
 		WHEN LOAD1 => s_next_state <= LOAD2;
 		
@@ -81,25 +78,32 @@ begin
 		END CASE;
 	
 	END PROCESS transition;
+	
 
 	-- FETCH2
-	ir_en <= '1' WHEN s_cur_state = FETCH2 ELSE '0';
+	ir_en <= '1' WHEN s_cur_state = FETCH2 or s_cur_state = DECODE ELSE '0'; -- added decode here to make sure ir_en is send to IR
 	pc_en <= '1' WHEN s_cur_state = FETCH2 ELSE '0';
 	-- R_OP and I_OP
 	imm_signed <= '1' WHEN s_cur_state = I_OP or s_cur_state = STORE or s_cur_state = LOAD1 ELSE '0';
 	rf_wren <= '1' WHEN s_cur_state = I_OP or s_cur_state = R_OP or s_cur_state = LOAD2 ELSE '0';
 	-- R_OP and STORE
-	sel_b <= '1' WHEN s_cur_state = R_OP or s_cur_state = STORE  ELSE '0';
+	sel_b <= '1' WHEN s_cur_state = R_OP  ELSE '0';
 	sel_rC <= '1' WHEN s_cur_state = R_OP ELSE '0';
 	--LOAD1
 	sel_addr <= '1' WHEN s_cur_state = LOAD1 or s_cur_state = STORE ELSE '0';
-	read <= '1' WHEN s_cur_state = LOAD1 ELSE '0';
+	read <= '1' WHEN s_cur_state = LOAD1 or s_cur_state = FETCH1 ELSE '0';
 	--LOAD2
 	sel_mem <= '1' WHEN s_cur_state = LOAD2 ELSE '0';
 	--STORE
-	write <= '1' WHEN s_cur_state = STORE ELSE '0';
+	write <= '1' WHEN s_cur_state = STORE  ELSE '0';
 	
-	
+	-- all outputs that are not used will be given 0
+	branch_op <= '0';
+	pc_add_imm <= '0';
+    pc_sel_a  <= '0';
+   	pc_sel_imm <= '0';
+   	sel_pc    <= '0';
+    sel_ra   <= '0';
 	
 	
 	
