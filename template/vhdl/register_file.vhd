@@ -24,7 +24,6 @@ begin
 	a <= s_reg(to_integer(unsigned(aa)));
 	b <= s_reg(to_integer(unsigned(ab)));
 	
-	s_reg(0) <= (OTHERS => '0');
 	
 	--write to register
 	dffs:process(clk, aw, wrdata) IS
