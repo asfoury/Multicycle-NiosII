@@ -12,4 +12,13 @@ end IR;
 
 architecture synth of IR is
 begin
+	
+	dff:process(clk) IS
+	BEGIN
+		IF(rising_edge(clk)) THEN
+			IF(enable = '1') THEN
+			Q <= D;
+			END IF;
+		END IF;
+	END process dff;
 end synth;

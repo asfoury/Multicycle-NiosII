@@ -4,9 +4,9 @@ use ieee.numeric_std.all;
 
 entity PC is
     port(
-        clk     : in  std_logic;
-        reset_n : in  std_logic;
-        en      : in  std_logic;
+        clk     : in  std_logic; -- clock
+        reset_n : in  std_logic; -- reset is active low and async
+        en      : in  std_logic; -- when enable is active address gets incremented by 4
         sel_a   : in  std_logic;
         sel_imm : in  std_logic;
         add_imm : in  std_logic;
@@ -17,5 +17,27 @@ entity PC is
 end PC;
 
 architecture synth of PC is
+	SIGNAL s_16_bit_register_cur : std_logic_vector(15 downto 0);
+	SIGNAL s_16_bit_register_next : std_logic_vector(15 downto 0);
+	
+	CONSTANT s_4inc : unsigned(15 downto 0) := X"0004";
 begin
+	dff:process(clk,reset_n) IS
+	BEGIN
+		IF (reset_n = '0') THEN
+			s_16_bit_register_cur <= (OTHERS => '0');
+		ELSE IF(rising_edge(clk)) THEN
+			IF(en = '1') THEN
+				s_16_bit_register_cur <= s_16_bit_register_next;
+			
+			END IF;
+		END IF;
+	END IF;
+END process dff;
+
+	s_16_bit_register_next <= std_logic_vector(unsigned(s_16_bit_register_cur) + s_4inc);
+	addr <= X"0000"&s_16_bit_register_cur;
+	
+	
+	
 end synth;
