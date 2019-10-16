@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Thu Oct 10 22:29:14 2019
+Wed Oct 16 10:14:34 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -17,9 +17,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   9. State Machine - |GECKO|CPU:inst|controller:controller_0|s_cur_state
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
  16. Source assignments for ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated
  17. Source assignments for RAM:RAM_0|altsyncram:s_memory_block_rtl_0|altsyncram_vh41:auto_generated
@@ -54,15 +54,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 10 22:29:14 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 16 10:14:34 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,243                                       ;
-;     Total combinational functions  ; 2,212                                       ;
-;     Dedicated logic registers      ; 1,182                                       ;
-; Total registers                    ; 1182                                        ;
+; Total logic elements               ; 3,399                                       ;
+;     Total combinational functions  ; 2,370                                       ;
+;     Dedicated logic registers      ; 1,204                                       ;
+; Total registers                    ; 1204                                        ;
 ; Total pins                         ; 102                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 65,536                                      ;
@@ -221,20 +221,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 3,243     ;
+; Estimated Total logic elements              ; 3,399     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2212      ;
+; Total combinational functions               ; 2370      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1699      ;
-;     -- 3 input functions                    ; 356       ;
-;     -- <=2 input functions                  ; 157       ;
+;     -- 4 input functions                    ; 1769      ;
+;     -- 3 input functions                    ; 423       ;
+;     -- <=2 input functions                  ; 178       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2155      ;
+;     -- normal mode                          ; 2313      ;
 ;     -- arithmetic mode                      ; 57        ;
 ;                                             ;           ;
-; Total registers                             ; 1182      ;
-;     -- Dedicated logic registers            ; 1182      ;
+; Total registers                             ; 1204      ;
+;     -- Dedicated logic registers            ; 1204      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 102       ;
@@ -243,9 +243,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1246      ;
-; Total fan-out                               ; 12792     ;
-; Average fan-out                             ; 3.49      ;
+; Maximum fan-out                             ; 1268      ;
+; Total fan-out                               ; 13359     ;
+; Average fan-out                             ; 3.48      ;
 +---------------------------------------------+-----------+
 
 
@@ -254,22 +254,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |GECKO                                       ; 2212 (113)          ; 1182 (0)                  ; 65536       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                ; GECKO           ; work         ;
-;    |CPU:inst|                                ; 1953 (0)            ; 1046 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                       ; CPU             ; work         ;
-;       |ALU:alu_0|                            ; 393 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0                                                                             ; ALU             ; work         ;
+; |GECKO                                       ; 2370 (113)          ; 1204 (0)                  ; 65536       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                                ; GECKO           ; work         ;
+;    |CPU:inst|                                ; 2111 (0)            ; 1078 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                       ; CPU             ; work         ;
+;       |ALU:alu_0|                            ; 445 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0                                                                             ; ALU             ; work         ;
 ;          |add_sub:add_sub_0|                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                           ; add_sub         ; work         ;
-;          |multiplexer:multiplexer_0|         ; 98 (98)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                   ; multiplexer     ; work         ;
-;          |shift_unit:shift_unit_0|           ; 263 (263)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                     ; shift_unit      ; work         ;
+;          |multiplexer:multiplexer_0|         ; 107 (107)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                   ; multiplexer     ; work         ;
+;          |shift_unit:shift_unit_0|           ; 306 (306)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                     ; shift_unit      ; work         ;
 ;       |IR:IR_0|                              ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|IR:IR_0                                                                               ; IR              ; work         ;
 ;       |PC:PC_0|                              ; 14 (14)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:PC_0                                                                               ; PC              ; work         ;
-;       |controller:controller_0|              ; 37 (37)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:controller_0                                                               ; controller      ; work         ;
+;       |controller:controller_0|              ; 41 (41)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:controller_0                                                               ; controller      ; work         ;
 ;       |mux2x16:mux_addr|                     ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x16:mux_addr                                                                      ; mux2x16         ; work         ;
-;       |mux2x32:mux_b|                        ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                         ; mux2x32         ; work         ;
+;       |mux2x32:mux_b|                        ; 41 (41)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                         ; mux2x32         ; work         ;
 ;       |mux2x32:mux_data|                     ; 126 (126)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_data                                                                      ; mux2x32         ; work         ;
 ;       |mux2x5:mux_aw|                        ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x5:mux_aw                                                                         ; mux2x5          ; work         ;
-;       |register_file:register_file_0|        ; 1333 (1333)         ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0                                                         ; register_file   ; work         ;
+;       |register_file:register_file_0|        ; 1428 (1428)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0                                                         ; register_file   ; work         ;
 ;    |LEDs:LEDs_0|                             ; 124 (124)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|LEDs:LEDs_0                                                                                    ; LEDs            ; work         ;
-;    |RAM:RAM_0|                               ; 2 (2)               ; 11 (11)                   ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0                                                                                      ; RAM             ; work         ;
+;    |RAM:RAM_0|                               ; 2 (2)               ; 1 (1)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0                                                                                      ; RAM             ; work         ;
 ;       |altsyncram:s_memory_block_rtl_0|      ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0|altsyncram:s_memory_block_rtl_0                                                      ; altsyncram      ; work         ;
 ;          |altsyncram_vh41:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0|altsyncram:s_memory_block_rtl_0|altsyncram_vh41:auto_generated                       ; altsyncram_vh41 ; work         ;
 ;    |ROM:ROM_0|                               ; 1 (1)               ; 1 (1)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0                                                                                      ; ROM             ; work         ;
@@ -315,81 +315,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------+--------------------------------------------+------------------------+
 ; Latch Name                                               ; Latch Enable Signal                        ; Free of Timing Hazards ;
 +----------------------------------------------------------+--------------------------------------------+------------------------+
-; CPU:inst|controller:controller_0|s_next_state.R_OP_390   ; GND                                        ; yes                    ;
-; CPU:inst|controller:controller_0|s_next_state.STORE_358  ; GND                                        ; yes                    ;
-; CPU:inst|controller:controller_0|s_next_state.LOAD1_323  ; GND                                        ; yes                    ;
-; CPU:inst|controller:controller_0|s_next_state.LOAD2_307  ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
-; CPU:inst|controller:controller_0|s_next_state.I_OP_374   ; GND                                        ; yes                    ;
-; CPU:inst|controller:controller_0|s_next_state.FETCH2_428 ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
-; CPU:inst|controller:controller_0|s_next_state.DECODE_409 ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
-; CPU:inst|controller:controller_0|s_next_state.FETCH1_447 ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.R_OP_393   ; GND                                        ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.STORE_361  ; GND                                        ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.LOAD1_326  ; GND                                        ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.LOAD2_310  ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.I_OP_377   ; GND                                        ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.FETCH2_431 ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.FETCH1_450 ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
+; CPU:inst|controller:controller_0|s_next_state.DECODE_412 ; CPU:inst|controller:controller_0|Selector9 ; yes                    ;
 ; Number of user-specified and inferred latches = 8        ;                                            ;                        ;
 +----------------------------------------------------------+--------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                           ;
-+-----------------------------------------------------+----------------------------------------+
-; Register name                                       ; Reason for Removal                     ;
-+-----------------------------------------------------+----------------------------------------+
-; CPU:inst|register_file:register_file_0|s_reg[0][0]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][1]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][2]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][3]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][4]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][5]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][6]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][7]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][8]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][9]  ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][10] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][11] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][12] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][13] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][14] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][15] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][16] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][17] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][18] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][19] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][20] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][21] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][22] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][23] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][24] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][25] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][26] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][27] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][28] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][29] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][30] ; Stuck at GND due to stuck port data_in ;
-; CPU:inst|register_file:register_file_0|s_reg[0][31] ; Stuck at GND due to stuck port data_in ;
-; ROM:ROM_0|s_address_cur[0]                          ; Merged with RAM:RAM_0|s_address_cur[0] ;
-; ROM:ROM_0|s_address_cur[1]                          ; Merged with RAM:RAM_0|s_address_cur[1] ;
-; ROM:ROM_0|s_address_cur[2]                          ; Merged with RAM:RAM_0|s_address_cur[2] ;
-; ROM:ROM_0|s_address_cur[3]                          ; Merged with RAM:RAM_0|s_address_cur[3] ;
-; ROM:ROM_0|s_address_cur[4]                          ; Merged with RAM:RAM_0|s_address_cur[4] ;
-; ROM:ROM_0|s_address_cur[5]                          ; Merged with RAM:RAM_0|s_address_cur[5] ;
-; ROM:ROM_0|s_address_cur[6]                          ; Merged with RAM:RAM_0|s_address_cur[6] ;
-; ROM:ROM_0|s_address_cur[7]                          ; Merged with RAM:RAM_0|s_address_cur[7] ;
-; ROM:ROM_0|s_address_cur[8]                          ; Merged with RAM:RAM_0|s_address_cur[8] ;
-; ROM:ROM_0|s_address_cur[9]                          ; Merged with RAM:RAM_0|s_address_cur[9] ;
-; CPU:inst|PC:PC_0|s_16_bit_register_cur[0,1]         ; Stuck at GND due to stuck port data_in ;
-; buttons:buttons_0|read_reg                          ; Lost fanout                            ;
-; CPU:inst|controller:controller_0|s_cur_state.BREAK  ; Lost fanout                            ;
-; Total Number of Removed Registers = 46              ;                                        ;
-+-----------------------------------------------------+----------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                             ;
-+----------------------------------------------------+---------------------------+----------------------------------------+
-; Register name                                      ; Reason for Removal        ; Registers Removed due to This Register ;
-+----------------------------------------------------+---------------------------+----------------------------------------+
-; CPU:inst|register_file:register_file_0|s_reg[0][0] ; Stuck at GND              ; buttons:buttons_0|read_reg             ;
-;                                                    ; due to stuck port data_in ;                                        ;
-+----------------------------------------------------+---------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                          ;
++----------------------------------------------------+----------------------------------------+
+; Register name                                      ; Reason for Removal                     ;
++----------------------------------------------------+----------------------------------------+
+; CPU:inst|PC:PC_0|s_16_bit_register_cur[0,1]        ; Stuck at GND due to stuck port data_in ;
+; buttons:buttons_0|read_reg                         ; Lost fanout                            ;
+; CPU:inst|controller:controller_0|s_cur_state.BREAK ; Lost fanout                            ;
+; Total Number of Removed Registers = 4              ;                                        ;
++----------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -397,12 +345,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1182  ;
+; Total registers                              ; 1204  ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 146   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1141  ;
+; Number of registers using Clock Enable       ; 1142  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -424,24 +372,34 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 
 
++-----------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                          ;
++-------------------------------+--------------------------------+------+
+; Register Name                 ; Megafunction                   ; Type ;
++-------------------------------+--------------------------------+------+
+; RAM:RAM_0|s_address_cur[0..9] ; RAM:RAM_0|s_memory_block_rtl_0 ; RAM  ;
++-------------------------------+--------------------------------+------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|s_next_state.R_OP ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |GECKO|CPU:inst|register_file:register_file_0|Mux17       ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |GECKO|CPU:inst|register_file:register_file_0|Mux50       ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[29]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |GECKO|CPU:inst|register_file:register_file_0|s_reg[0][9] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|s_next_state.I_OP ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |GECKO|CPU:inst|register_file:register_file_0|Mux15       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |GECKO|CPU:inst|register_file:register_file_0|Mux45       ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |GECKO|rddata[24]                                         ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[6]                                          ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|rddata[3]                                          ;
-; 15:1               ; 8 bits    ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|o[15] ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 72 LEs               ; 8 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[18]                    ;
+; 15:1               ; 8 bits    ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|o[11] ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[20]                    ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 36 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|o[7]  ;
 ; 17:1               ; 4 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[27]                    ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|o[3]  ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[29]                    ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 22 LEs               ; 2 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[30]                    ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|o[2]  ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 22 LEs               ; 2 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[29]                    ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|mux2x32:mux_data|o[31]                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -622,25 +580,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 102                         ;
-; cycloneiii_ff         ; 1182                        ;
-;     CLR               ; 21                          ;
+; cycloneiii_ff         ; 1204                        ;
+;     CLR               ; 20                          ;
 ;     CLR SCLR          ; 8                           ;
 ;     ENA               ; 1024                        ;
-;     ENA CLR           ; 117                         ;
-;     plain             ; 12                          ;
-; cycloneiii_lcell_comb ; 2212                        ;
+;     ENA CLR           ; 118                         ;
+;     plain             ; 34                          ;
+; cycloneiii_lcell_comb ; 2370                        ;
 ;     arith             ; 57                          ;
 ;         2 data inputs ; 18                          ;
 ;         3 data inputs ; 39                          ;
-;     normal            ; 2155                        ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 128                         ;
-;         3 data inputs ; 317                         ;
-;         4 data inputs ; 1699                        ;
+;     normal            ; 2313                        ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 148                         ;
+;         3 data inputs ; 384                         ;
+;         4 data inputs ; 1769                        ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 20.00                       ;
-; Average LUT depth     ; 13.57                       ;
+; Max LUT depth         ; 19.00                       ;
+; Average LUT depth     ; 13.98                       ;
 +-----------------------+-----------------------------+
 
 
@@ -649,7 +607,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -659,7 +617,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Oct 10 22:28:45 2019
+    Info: Processing started: Wed Oct 16 10:14:05 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -748,7 +706,6 @@ Info (12128): Elaborating entity "ALU" for hierarchy "CPU:inst|ALU:alu_0"
 Info (12128): Elaborating entity "multiplexer" for hierarchy "CPU:inst|ALU:alu_0|multiplexer:multiplexer_0"
 Info (12128): Elaborating entity "add_sub" for hierarchy "CPU:inst|ALU:alu_0|add_sub:add_sub_0"
 Info (12128): Elaborating entity "comparator" for hierarchy "CPU:inst|ALU:alu_0|comparator:comparator_0"
-Info (10041): Inferred latch for "r" at comparator.vhd(19) File: /media/sf_student/ArchOrd/Projet1/template/vhdl/comparator.vhd Line: 19
 Info (12128): Elaborating entity "logic_unit" for hierarchy "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0"
 Info (12128): Elaborating entity "shift_unit" for hierarchy "CPU:inst|ALU:alu_0|shift_unit:shift_unit_0"
 Info (12128): Elaborating entity "register_file" for hierarchy "CPU:inst|register_file:register_file_0"
@@ -756,7 +713,8 @@ Info (12128): Elaborating entity "mux2x5" for hierarchy "CPU:inst|mux2x5:mux_aw"
 Info (12128): Elaborating entity "mux2x32" for hierarchy "CPU:inst|mux2x32:mux_data"
 Info (12128): Elaborating entity "extend" for hierarchy "CPU:inst|extend:extend_0"
 Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM_0"
-Info (12128): Elaborating entity "ROM_Block" for hierarchy "ROM:ROM_0|ROM_Block:rom_block_0" File: /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd Line: 32
+Warning (10036): Verilog HDL or VHDL warning at ROM.vhd(17): object "s_read_and_cs" assigned a value but never read File: /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd Line: 17
+Info (12128): Elaborating entity "ROM_Block" for hierarchy "ROM:ROM_0|ROM_Block:rom_block_0" File: /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd Line: 31
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component" File: /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd Line: 85
 Info (12130): Elaborated megafunction instantiation "ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component" File: /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd Line: 85
 Info (12133): Instantiated megafunction "ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component" with the following parameter: File: /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd Line: 85
@@ -842,14 +800,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3522 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3670 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 3356 logic cells
+    Info (21061): Implemented 3504 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 1009 megabytes
-    Info: Processing ended: Thu Oct 10 22:29:14 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 1014 megabytes
+    Info: Processing ended: Wed Oct 16 10:14:34 2019
     Info: Elapsed time: 00:00:29
     Info: Total CPU time (on all processors): 00:00:36
 

@@ -15,7 +15,6 @@ end ROM;
 architecture synth of ROM is
 	
 	signal s_read_and_cs : std_logic;
-	signal s_address_cur : std_logic_vector(9 downto 0);
 	signal s_read_and_cs_cur : std_logic;
 	signal s_number : std_logic_vector(31 downto 0);
 	
@@ -31,18 +30,17 @@ begin
 	
 	rom_block_0 : ROM_Block
 	Port map(
-		address => s_address_cur,
+		address => address,
 		clock => clk,
 		q => s_number
 	);
 	
 	
 	s_read_and_cs <= read and cs;
-	dff1:process(clk,s_read_and_cs_cur,s_read_and_cs,s_address_cur,address) IS
+	dff1:process(clk) IS
 		BEGIN
 		IF(rising_edge(clk)) THEN
-			s_read_and_cs_cur <= s_read_and_cs;
-			s_address_cur <= address;
+			s_read_and_cs_cur <= read and cs;
 		END IF;
 	END process dff1;	
 	

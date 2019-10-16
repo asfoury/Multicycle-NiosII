@@ -21,6 +21,6 @@ begin
 	         else (not zero) WHEN op = "011"
 	         else zero WHEN op = "100"
 	         else ((not carry) or zero) WHEN op = "101"
-	         else (carry and (not zero)) WHEN op = "110";
+	         else (carry and (not zero)) WHEN op = "110" else '0';
 
 end synth;

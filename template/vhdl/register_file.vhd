@@ -23,15 +23,16 @@ begin
 	
 	a <= s_reg(to_integer(unsigned(aa)));
 	b <= s_reg(to_integer(unsigned(ab)));
-	
+
 	
 	--write to register
 	dffs:process(clk, aw, wrdata) IS
 		BEGIN
 		IF(rising_edge(clk)) THEN
+			s_reg(0) <= (OTHERS => '0');
 			IF(wren = '1') THEN
 				s_reg(to_integer(unsigned(aw))) <= wrdata;
-				s_reg(0) <= (OTHERS => '0');
+				
 			END IF;
 		END IF;
 			

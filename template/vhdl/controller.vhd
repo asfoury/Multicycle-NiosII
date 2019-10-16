@@ -42,7 +42,7 @@ architecture synth of controller is
 begin
 	op_alu <= "100001" WHEN op = "111010" and opx = "001110" else
 			  "110011" WHEN op= "111010"  and opx = "011011" else
-			  "000000" WHEN (op = "000010" or op="010111" or op = "000101")
+			  "000111" WHEN (op = "000100" or op="010111" or op = "010101")
 		else "000000";
 	
 	dff : process(clk, reset_n) IS
@@ -81,8 +81,8 @@ begin
 	
 
 	-- FETCH2
-	ir_en <= '1' WHEN s_cur_state = FETCH2 or s_cur_state = DECODE ELSE '0'; -- added decode here to make sure ir_en is send to IR
-	pc_en <= '1' WHEN s_cur_state = FETCH2 ELSE '0';
+	ir_en <= '1' WHEN s_cur_state = FETCH2  ELSE '0'; 
+	pc_en <= '1' WHEN s_cur_state = FETCH2  ELSE '0';
 	-- R_OP and I_OP
 	imm_signed <= '1' WHEN s_cur_state = I_OP or s_cur_state = STORE or s_cur_state = LOAD1 ELSE '0';
 	rf_wren <= '1' WHEN s_cur_state = I_OP or s_cur_state = R_OP or s_cur_state = LOAD2 ELSE '0';

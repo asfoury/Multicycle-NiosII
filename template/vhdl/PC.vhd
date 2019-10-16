@@ -20,7 +20,6 @@ architecture synth of PC is
 	SIGNAL s_16_bit_register_cur : std_logic_vector(15 downto 0);
 	SIGNAL s_16_bit_register_next : std_logic_vector(15 downto 0);
 	
-	CONSTANT s_4inc : unsigned(15 downto 0) := X"0004";
 begin
 	dff:process(clk,reset_n) IS
 	BEGIN
@@ -35,8 +34,8 @@ begin
 	END IF;
 END process dff;
 
-	s_16_bit_register_next <= std_logic_vector(unsigned(s_16_bit_register_cur) + s_4inc);
-	addr <= X"0000"&s_16_bit_register_cur;
+	s_16_bit_register_next <= std_logic_vector(unsigned(s_16_bit_register_cur) + 4);
+	addr <= "0000000000000000"&s_16_bit_register_cur;
 	
 	
 	

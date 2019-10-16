@@ -1,0 +1,4 @@
+Time: 107.5 ns Input File Line: 26
+* Error: sel_b = '1' instead of '0'.
+ During STORE, sel_b has to be 0.
+
