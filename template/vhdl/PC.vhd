@@ -34,8 +34,22 @@ begin
 	END IF;
 END process dff;
 
-	s_16_bit_register_next <= std_logic_vector(unsigned(s_16_bit_register_cur) + 4) when add_imm ='0' 
-	else std_logic_vector(unsigned(s_16_bit_register_cur) + unsigned(imm)); -- not sure if sould be signed or unsigned think wont make a diffrence
+	--s_16_bOrimm <= (imm(15 downto 2) & "00") WHEN (sel_imm = '1' and sel_a = '0') else a;
+	
+	--s_16_bit_register_next <= s_16_bOrimm  WHEN (add_imm ='0' and (sel_imm = '1' or sel_a='1')) else 
+							  --std_logic_vector(unsigned(s_16_bit_register_cur) + unsigned(imm)) 
+							  --WHEN (add_imm ='1' and sel_imm = '0') else
+							  --std_logic_vector(unsigned(s_16_bit_register_cur) + 4);
+							  
+	s_16_bit_register_next <= std_logic_vector(unsigned(s_16_bit_register_cur) + unsigned(imm)) WHEN 
+							  (add_imm ='1' and sel_a = '0' and sel_imm ='0')else
+							  (imm(13 downto 0) & "00") WHEN (add_imm ='0' and sel_a = '0' and sel_imm ='1') else
+							  a WHEN (add_imm ='0' and sel_a = '1' and sel_imm ='0') else
+							   std_logic_vector(unsigned(s_16_bit_register_cur) + 4);
+							  
+							  
+	
+	
 	addr <= "0000000000000000"&s_16_bit_register_cur;
 	
 	

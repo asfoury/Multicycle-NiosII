@@ -28,41 +28,137 @@
 # Compile of ROM_Block.vhd was successful.
 # Compile of shift_unit.vhd was successful.
 # 28 compiles, 0 failed with no errors.
-vsim work.tb_gecko
-# vsim work.tb_gecko 
-# Start time: 14:49:44 on Oct 19,2019
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:32:08 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 21:32:08 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:32:08 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 21:32:08 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:32:08 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 21:32:08 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim tb_Controller -Gtext_in=Controller/in.txt 
+# Start time: 21:32:08 on Oct 19,2019
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.tb_gecko(testbench)
-# Loading work.gecko(bdf_type)
 # Loading ieee.numeric_std(body)
-# Loading work.buttons(fast)
-# Loading work.decoder(fast)
-# Loading work.cpu(bdf_type)
-# Loading work.alu(bdf_type)
-# Loading work.add_sub(fast)
-# Loading work.comparator(fast)
-# Loading work.logic_unit(fast)
-# Loading work.multiplexer(fast)
-# Loading work.shift_unit(fast)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
 # Loading work.controller(fast)
-# Loading work.extend(fast)
-# Loading work.ir(fast)
-# Loading work.mux2x16(fast)
-# Loading work.mux2x5(fast)
-# Loading work.mux2x32(fast)
-# Loading work.pc(fast)
-# Loading work.register_file(fast)
-# Loading work.leds(fast)
-# Loading work.ram(fast)
-# Loading work.rom(fast)
-# Loading work.rom_block(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_common_conversion(body)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altsyncram(translated)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# --RI_OP test:-----------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 242500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 242500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 262500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 262500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 282500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 282500 ps  Iteration: 1  Instance: /tb_controller
+# --I_OP test:------------------------------------------------------------
+# --UI_OP test:-----------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 322500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 322500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 332500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 332500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 347500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 352500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 352500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 362500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 362500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 377500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 382500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 382500 ps  Iteration: 1  Instance: /tb_controller
+# --LOAD test:------------------------------------------------------------
+# ** Error: Unexpected output value for rf_wren
+#    Time: 392500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 392500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 407500 ps  Iteration: 1  Instance: /tb_controller
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
 # Compile of buttons.vhd was successful.
 # Compile of controller.vhd was successful.
 # Compile of CPU.vhd was successful.
@@ -92,118 +188,944 @@ vsim work.tb_gecko
 # Compile of ROM_Block.vhd was successful.
 # Compile of shift_unit.vhd was successful.
 # 28 compiles, 0 failed with no errors.
-add wave -position insertpoint sim:/tb_gecko/gecko_0/*
-run 5000 ns
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-add wave -position insertpoint  \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_controller_0/s_cur_state \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_controller_0/s_next_state
-restart -f
-# Loading work.tb_gecko(testbench)
-# Loading work.gecko(bdf_type)
-# Loading work.buttons(fast)
-# Loading work.decoder(fast)
-# Loading work.cpu(bdf_type)
-# Loading work.alu(bdf_type)
-# Loading work.add_sub(fast)
-# Loading work.comparator(fast)
-# Loading work.logic_unit(fast)
-# Loading work.multiplexer(fast)
-# Loading work.shift_unit(fast)
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:48 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 22:07:49 on Oct 19,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:49 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:07:49 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:07:49 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:07:49 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:07:49 on Oct 19,2019, Elapsed time: 0:35:41
+# Errors: 21, Warnings: 23
+# vsim tb_Controller -Gtext_in=Controller/in.txt 
+# Start time: 22:07:49 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
 # Loading work.controller(fast)
-# Loading work.extend(fast)
-# Loading work.ir(fast)
-# Loading work.mux2x16(fast)
-# Loading work.mux2x5(fast)
-# Loading work.mux2x32(fast)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# --RI_OP test:-----------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 242500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 242500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 262500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 262500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 282500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 282500 ps  Iteration: 1  Instance: /tb_controller
+# --I_OP test:------------------------------------------------------------
+# --UI_OP test:-----------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+# Compile of buttons.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of CPU.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of GECKO.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_GECKO.vhd was successful.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 28 compiles, 0 failed with no errors.
+restart -f
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:28:15 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 22:28:15 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:28:15 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:28:15 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:28:15 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:28:15 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:28:16 on Oct 19,2019, Elapsed time: 0:20:27
+# Errors: 6, Warnings: 23
+# vsim tb_Controller -Gtext_in=Controller/in.txt 
+# Start time: 22:28:16 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for rf_wren
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# --RI_OP test:-----------------------------------------------------------
+# --I_OP test:------------------------------------------------------------
+# --UI_OP test:-----------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+do test_Controller_complete.do.do
+# Cannot open macro file: test_Controller_complete.do.do
+do test_Controller_complete.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:29:03 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 22:29:03 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:29:03 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:29:03 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:29:03 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:29:03 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:29:04 on Oct 19,2019, Elapsed time: 0:00:48
+# Errors: 7, Warnings: 23
+# vsim tb_Controller -Gtext_in=Controller/in_complete.txt 
+# Start time: 22:29:04 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for rf_wren
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# --RI_OP test:-----------------------------------------------------------
+# --I_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for imm_signed
+#    Time: 472500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 472500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 482500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 482500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 497500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 502500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 502500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 512500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 512500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 527500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 532500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 532500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 542500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 542500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 557500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 562500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 562500 ps  Iteration: 1  Instance: /tb_controller
+# --UI_OP test:-----------------------------------------------------------
+# ** Error: Unexpected output value for rf_wren
+#    Time: 572500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 572500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 587500 ps  Iteration: 1  Instance: /tb_controller
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+# Compile of buttons.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of CPU.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of GECKO.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_GECKO.vhd was successful.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 28 compiles, 0 failed with no errors.
+restart -f
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+do test_Controller_complete.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:38:39 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 22:38:39 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:38:39 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:38:39 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:38:39 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:38:39 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:38:40 on Oct 19,2019, Elapsed time: 0:09:36
+# Errors: 26, Warnings: 23
+# vsim tb_Controller -Gtext_in=Controller/in_complete.txt 
+# Start time: 22:38:40 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# --RI_OP test:-----------------------------------------------------------
+# --I_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for imm_signed
+#    Time: 462500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 462500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 472500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 472500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 487500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 492500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 492500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 502500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 502500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 517500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 522500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 522500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 532500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 532500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 547500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 552500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 552500 ps  Iteration: 1  Instance: /tb_controller
+# --UI_OP test:-----------------------------------------------------------
+# ** Error: Unexpected output value for rf_wren
+#    Time: 562500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 562500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 577500 ps  Iteration: 1  Instance: /tb_controller
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+# Compile of buttons.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of CPU.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of GECKO.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_GECKO.vhd was successful.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 28 compiles, 0 failed with no errors.
+restart -f
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+do test_Controller_complete.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:47:11 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 22:47:11 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:47:12 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:47:12 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:47:12 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:47:12 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:47:12 on Oct 19,2019, Elapsed time: 0:08:32
+# Errors: 20, Warnings: 23
+# vsim tb_Controller -Gtext_in=Controller/in_complete.txt 
+# Start time: 22:47:12 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# --RI_OP test:-----------------------------------------------------------
+# --I_OP test:------------------------------------------------------------
+# --UI_OP test:-----------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:47:59 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 22:47:59 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:47:59 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:47:59 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:47:59 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:47:59 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:48:00 on Oct 19,2019, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 23
+# vsim tb_Controller -Gtext_in=Controller/in.txt 
+# Start time: 22:48:00 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# --RI_OP test:-----------------------------------------------------------
+# --I_OP test:------------------------------------------------------------
+# --UI_OP test:-----------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+do test_Controller_complete.do.do
+# Cannot open macro file: test_Controller_complete.do.do
+do test_Controller_complete.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:11 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# End time: 22:48:11 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:11 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:48:11 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:11 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(129): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(130): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:48:11 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:48:12 on Oct 19,2019, Elapsed time: 0:00:12
+# Errors: 1, Warnings: 23
+# vsim tb_Controller -Gtext_in=Controller/in_complete.txt 
+# Start time: 22:48:12 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(fast)
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# --RI_OP test:-----------------------------------------------------------
+# --I_OP test:------------------------------------------------------------
+# --UI_OP test:-----------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# --CALLR test:-----------------------------------------------------------
+# --JMP test:-------------------------------------------------------------
+# --JMPI test:--------------------------------------------------
+# --BREAK test:-----------------------------------------------------------
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+do test_PC.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying /media/sf_student/ArchOrd/Projet1/template/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:21 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../vhdl/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture synth of PC
+# End time: 22:48:22 on Oct 19,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:22 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/check_functions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(49): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(59): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(65): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(68): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# ** Warning: ../testbench/check_functions.vhd(83): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(93): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(99): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# ** Warning: ../testbench/check_functions.vhd(117): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(127): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(133): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(135): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# ** Warning: ../testbench/check_functions.vhd(151): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(167): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(169): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# ** Warning: ../testbench/check_functions.vhd(170): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# End time: 22:48:22 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:22 on Oct 19,2019
+# vcom -reportprogress 300 -93 ../testbench/tb_PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_PC
+# -- Compiling architecture testbench of tb_PC
+# ** Warning: ../testbench/tb_PC.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 22:48:22 on Oct 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 22:48:23 on Oct 19,2019, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 23
+# vsim tb_PC 
+# Start time: 22:48:23 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_pc(testbench)
+# Loading ieee.numeric_std(body)
 # Loading work.pc(fast)
-# Loading work.register_file(fast)
-# Loading work.leds(fast)
-# Loading work.ram(fast)
-# Loading work.rom(fast)
-# Loading work.rom_block(syn)
-run 5000 ns
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-restart -f
-run 5000 ns
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-add wave -position insertpoint  \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/clk \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/reset_n \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/en \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/sel_a \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/sel_imm \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/add_imm \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/imm \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/a \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/addr \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/s_16_bit_register_cur \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/s_16_bit_register_next
-restart -f
-run 5000 ns
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-add wave -position insertpoint  \
-sim:/tb_gecko/gecko_0/b2v_inst/b2v_register_file_0/s_reg
-restart -f
-run 5000 ns
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# - Program Counter test:
+# - reset_n test...
+# - sel_imm test...
+# - sel_a test...
+# - add_imm test...
+# - enable test...
+# - pc+4 test...
+# ===================================================================
+# Simulation is successful
+# ===================================================================
