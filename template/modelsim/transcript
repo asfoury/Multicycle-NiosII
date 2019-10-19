@@ -28,3 +28,182 @@
 # Compile of ROM_Block.vhd was successful.
 # Compile of shift_unit.vhd was successful.
 # 28 compiles, 0 failed with no errors.
+vsim work.tb_gecko
+# vsim work.tb_gecko 
+# Start time: 14:49:44 on Oct 19,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_gecko(testbench)
+# Loading work.gecko(bdf_type)
+# Loading ieee.numeric_std(body)
+# Loading work.buttons(fast)
+# Loading work.decoder(fast)
+# Loading work.cpu(bdf_type)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(fast)
+# Loading work.comparator(fast)
+# Loading work.logic_unit(fast)
+# Loading work.multiplexer(fast)
+# Loading work.shift_unit(fast)
+# Loading work.controller(fast)
+# Loading work.extend(fast)
+# Loading work.ir(fast)
+# Loading work.mux2x16(fast)
+# Loading work.mux2x5(fast)
+# Loading work.mux2x32(fast)
+# Loading work.pc(fast)
+# Loading work.register_file(fast)
+# Loading work.leds(fast)
+# Loading work.ram(fast)
+# Loading work.rom(fast)
+# Loading work.rom_block(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Compile of buttons.vhd was successful.
+# Compile of controller.vhd was successful.
+# Compile of CPU.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of GECKO.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_GECKO.vhd was successful.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 28 compiles, 0 failed with no errors.
+add wave -position insertpoint sim:/tb_gecko/gecko_0/*
+run 5000 ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+add wave -position insertpoint  \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_controller_0/s_cur_state \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_controller_0/s_next_state
+restart -f
+# Loading work.tb_gecko(testbench)
+# Loading work.gecko(bdf_type)
+# Loading work.buttons(fast)
+# Loading work.decoder(fast)
+# Loading work.cpu(bdf_type)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(fast)
+# Loading work.comparator(fast)
+# Loading work.logic_unit(fast)
+# Loading work.multiplexer(fast)
+# Loading work.shift_unit(fast)
+# Loading work.controller(fast)
+# Loading work.extend(fast)
+# Loading work.ir(fast)
+# Loading work.mux2x16(fast)
+# Loading work.mux2x5(fast)
+# Loading work.mux2x32(fast)
+# Loading work.pc(fast)
+# Loading work.register_file(fast)
+# Loading work.leds(fast)
+# Loading work.ram(fast)
+# Loading work.rom(fast)
+# Loading work.rom_block(syn)
+run 5000 ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+restart -f
+run 5000 ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+add wave -position insertpoint  \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/clk \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/reset_n \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/en \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/sel_a \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/sel_imm \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/add_imm \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/imm \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/a \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/addr \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/s_16_bit_register_cur \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_PC_0/s_16_bit_register_next
+restart -f
+run 5000 ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+add wave -position insertpoint  \
+sim:/tb_gecko/gecko_0/b2v_inst/b2v_register_file_0/s_reg
+restart -f
+run 5000 ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_alu_0/b2v_add_sub_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /tb_gecko/gecko_0/b2v_inst/b2v_register_file_0

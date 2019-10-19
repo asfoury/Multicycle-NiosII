@@ -44,7 +44,13 @@ begin
 			  "110011" WHEN op= "111010"  and opx = "011011" else
 			  "000111" WHEN (op = "000100" or op="010111" or op = "010101") else
 			  -- corresponds to branch uncond instruction want to do the comp A==B so op_alu gets the compare op
-			  "011100" WHEN (op = "000110")
+			  "011100" WHEN (op = "000110" or op="100110") else
+			  "011001" WHEN (op = "001110") else
+			  "011010" WHEN (op = "010110")  else
+			  "011011" WHEN (op = "011110") else
+			  "011101" WHEN (op = "101110") else
+			  "011110" WHEN (op = "110110")
+			  
 		else "000000";
 	
 	dff : process(clk, reset_n) IS
@@ -70,7 +76,8 @@ begin
 		 if(op = "010111") THEN s_next_state <= LOAD1; end if;
 		 if(op = "010101") THEN s_next_state <= STORE; end if;
 		 -- add new states part 4 of project	
-		 if(op = "000110") THEN s_next_state <= BRANCH; end if;	
+		 if(op = "000110") or (op = "001110") or (op = "010110") or (op = "011110") or (op = "100110") 
+		 or (op = "101110") or (op = "110110") THEN s_next_state <= BRANCH; end if;	
 		 --	
 		 if(op= "111010" and opx ="110100") THEN s_next_state <= BREAK; end if;
 		
