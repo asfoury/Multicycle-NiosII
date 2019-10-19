@@ -22,9 +22,9 @@ V207_zj^V^3XmVFBkYPT0^3
 !s100 Ho^oT``GLJUNf<W@=D9Un1
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1571213346
+Z8 !s110 1571487351
 !i10b 1
-Z9 !s108 1571213346.000000
+Z9 !s108 1571487351.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/add_sub.vhd|
 Z11 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/add_sub.vhd|
 !i113 1
@@ -62,11 +62,11 @@ VLIV0?b]kCZ40<iPbTC=4:2
 !s100 O`l`Xc5c_V9`dzon<W_fQ2
 R7
 32
-R8
+Z17 !s110 1571487352
 !i10b 1
 R9
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/ALU.vhd|
-Z18 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/ALU.vhd|
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/ALU.vhd|
+Z19 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/ALU.vhd|
 !i113 1
 R12
 R13
@@ -80,33 +80,33 @@ Vn7Jhlm<g3=Igo4gAY0?Z=3
 !s100 ao^@A8=RSg[FW?jY:[EXI0
 R7
 32
-R8
+R17
 !i10b 1
 R9
-R17
 R18
+R19
 !i113 1
 R12
 R13
 Ebuttons
-Z19 w1507042160
+Z20 w1507042160
 R1
 R2
 R3
 R4
-Z20 8/media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd
-Z21 F/media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd
+Z21 8/media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd
+Z22 F/media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd
 l0
 L5
 V6nKA>6XmzI`j>a@n4^6Pn2
 !s100 =22bV77NIHzbkEY31]2hQ2
 R7
 32
-Z22 !s110 1571213344
+Z23 !s110 1571487350
 !i10b 1
-Z23 !s108 1571213344.000000
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd|
-Z25 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd|
+Z24 !s108 1571487350.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd|
+Z26 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/buttons.vhd|
 !i113 1
 R12
 R13
@@ -121,22 +121,22 @@ Vz=5DD3`[2T_e1Tj`RUBgR3
 !s100 l:Q7JXKFoP5Z9FQDUXG9]3
 R7
 32
-R22
-!i10b 1
 R23
+!i10b 1
 R24
 R25
+R26
 !i113 1
 R12
 R13
 Pcheck_functions
-Z26 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z27 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R2
 R3
-Z27 w1538998210
+Z28 w1538998210
 R4
-Z28 8/media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd
-Z29 F/media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd
+Z29 8/media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd
+Z30 F/media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd
 l0
 L6
 V<W1[dk2LN3hi[c?7kCXRb3
@@ -144,17 +144,17 @@ V<W1[dk2LN3hi[c?7kCXRb3
 R7
 32
 b1
-Z30 !s110 1571213345
+R8
 !i10b 1
-Z31 !s108 1571213345.000000
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd|
-Z33 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd|
+R9
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd|
+Z32 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/check_functions.vhd|
 !i113 1
 R12
 R13
 Bbody
-Z34 DPx4 work 15 check_functions 0 22 <W1[dk2LN3hi[c?7kCXRb3
-R26
+Z33 DPx4 work 15 check_functions 0 22 <W1[dk2LN3hi[c?7kCXRb3
+R27
 R2
 R3
 l0
@@ -163,30 +163,30 @@ VHlk0`BAAbR3d7A^]PlU5K0
 !s100 ]Ul<gd[SNh_SV]VQVO[::0
 R7
 32
-R30
+R8
 !i10b 1
+R9
 R31
 R32
-R33
 !i113 1
 R12
 R13
 Ecomparator
-Z35 w1571167527
+Z34 w1571167527
 R2
 R3
 R4
-Z36 8/media/sf_student/ArchOrd/Projet1/template/vhdl/comparator.vhd
-Z37 F/media/sf_student/ArchOrd/Projet1/template/vhdl/comparator.vhd
+Z35 8/media/sf_student/ArchOrd/Projet1/template/vhdl/comparator.vhd
+Z36 F/media/sf_student/ArchOrd/Projet1/template/vhdl/comparator.vhd
 l0
 L4
 V@=60KOYT9aeR3Fh==NPQG3
 !s100 85<][j?:Q]VXBe2_m977L0
 R7
 32
-R8
+R17
 !i10b 1
-R9
+Z37 !s108 1571487352.000000
 Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/comparator.vhd|
 Z39 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/comparator.vhd|
 !i113 1
@@ -202,16 +202,16 @@ VBkC_>QHBBCjVE<b?81z:f1
 !s100 j4PaE;M1GaznO5Gi8hXVM3
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 R38
 R39
 !i113 1
 R12
 R13
 Econtroller
-Z40 w1571166225
+Z40 w1571486876
 R2
 R3
 R4
@@ -223,9 +223,9 @@ V_=HMC5nS7CFmjhkXoh^<L0
 !s100 iLCb?>B5ja1L5iDVmAU]]0
 R7
 32
-R30
-!i10b 1
 R23
+!i10b 1
+R24
 Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/controller.vhd|
 Z44 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/controller.vhd|
 !i113 1
@@ -237,13 +237,13 @@ R3
 DEx4 work 10 controller 0 22 _=HMC5nS7CFmjhkXoh^<L0
 l42
 L39
-VSA:2:hHm]U=[H6dJ^Q]il3
-!s100 G03BN4Qk]__J]7:59UlE^0
+V3Dab^i5^k>WZDKbgTJ6Rm0
+!s100 ?kXI7B;A73ma3icBU:McE2
 R7
 32
-R30
-!i10b 1
 R23
+!i10b 1
+R24
 R43
 R44
 !i113 1
@@ -262,9 +262,9 @@ VoN1Z@H62cOJ8j76FSZXfk0
 !s100 ?^3E^YkUK_jO8j=PLQg0X0
 R7
 32
-R30
+R23
 !i10b 1
-R31
+R24
 Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/CPU.vhd|
 Z49 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/CPU.vhd|
 !i113 1
@@ -280,9 +280,9 @@ VU_VbP>G_0>o[AHnGEJ`7A2
 !s100 nj]fOeJzKgV2QQoiYJ37e2
 R7
 32
-R30
+R23
 !i10b 1
-R31
+R24
 R48
 R49
 !i113 1
@@ -301,9 +301,9 @@ VSg<AcAL[fZ1zMI?UhfBNi0
 !s100 jK;jV5kd1ZOaK]FLU5e2@3
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/decoder.vhd|
 Z54 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/decoder.vhd|
 !i113 1
@@ -319,9 +319,9 @@ VEOW:hPmoX^W]1z;Ojd@oj0
 !s100 a=a<5GlF9VmTQ^D]ngSiO1
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 R53
 R54
 !i113 1
@@ -340,9 +340,9 @@ VUL_6DHeRdI@k7FglXE4m:2
 !s100 [OER<nle^Gzi[Q]KGKSL33
 R7
 32
-R30
+R23
 !i10b 1
-R31
+R24
 Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/extend.vhd|
 Z59 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/extend.vhd|
 !i113 1
@@ -358,9 +358,9 @@ V`O>nAz1EQ]EDEo[7_FRRR2
 !s100 Uc?Fj:_TSb`E1;`ZDCfgj2
 R7
 32
-R30
+R23
 !i10b 1
-R31
+R24
 R58
 R59
 !i113 1
@@ -379,9 +379,9 @@ VUUo[=d8;JL2NUd?KL5z>W3
 !s100 LSB69=RnS?7B=e740[]>J0
 R7
 32
-R30
+R23
 !i10b 1
-R31
+R24
 Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/GECKO.vhd|
 Z64 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/GECKO.vhd|
 !i113 1
@@ -397,9 +397,9 @@ VXW8hfda?:0fgXTELaMc<M2
 !s100 6_aIkK46>FzI3D:<OBG:Z1
 R7
 32
-R30
+R23
 !i10b 1
-R31
+R24
 R63
 R64
 !i113 1
@@ -418,9 +418,9 @@ V^D0Sz[@@D76hLF6hc_Qm`1
 !s100 g>VC3<ZiU9SUL1eB^Hc9_3
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/IR.vhd|
 Z70 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/IR.vhd|
 !i113 1
@@ -436,9 +436,9 @@ V]OTXFdDjdVAZ:Ka[WQ5>;0
 !s100 SInJ2?i:YCW;cDfJE=5>n3
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 R69
 R70
 !i113 1
@@ -458,9 +458,9 @@ V82^IRfHNag^>;Yc>Z[nm>3
 !s100 LBhnQz<diU;5h1EbFfFEW1
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/LEDs.vhd|
 Z75 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/LEDs.vhd|
 !i113 1
@@ -477,9 +477,9 @@ V>3f<EDDzh?fl>Y0i[ad233
 !s100 >nX>UXM`h;^[mnM>habSd1
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 R74
 R75
 !i113 1
@@ -498,9 +498,9 @@ VfUEL39DQfcR_XLk:Hoe<f3
 !s100 UJioXKUg8XUULGTSe2WE20
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/logic_unit.vhd|
 Z80 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/logic_unit.vhd|
 !i113 1
@@ -516,9 +516,9 @@ Vmjm`?_GkCJcYK`?a`h3`B3
 !s100 S<e^ZJO=jnXUEFEgI^T6A0
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 R79
 R80
 !i113 1
@@ -537,9 +537,9 @@ V4iH6`nZgBAHVia??bJk>G2
 !s100 UDM^5ga=kb9Z[=K^]bghV0
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/multiplexer.vhd|
 Z85 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/multiplexer.vhd|
 !i113 1
@@ -555,9 +555,9 @@ VkfGAlZ;Q0PAMQMHZf=1D10
 !s100 KF1ocdSA:CVWDbaFh4Q;02
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 R84
 R85
 !i113 1
@@ -576,9 +576,9 @@ VaHOL`3MF?g?d`[6<SJm^e1
 !s100 ]AkMHg3_OS9:k6cjVd[b:3
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/mux2x16.vhd|
 Z90 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/mux2x16.vhd|
 !i113 1
@@ -594,9 +594,9 @@ VjSdMA4eXn?D0WB:TEUST>3
 !s100 ?GWh2?MR@]OfUkbjhZM@k0
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 R89
 R90
 !i113 1
@@ -615,9 +615,9 @@ V5<9;E?13m3J1aF01KEAAR1
 !s100 Iab^5l@hZCaSi22IEjFiN0
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/mux2x32.vhd|
 Z95 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/mux2x32.vhd|
 !i113 1
@@ -633,9 +633,9 @@ VEDNCPHZ6kI4i`:KGT?jgT2
 !s100 N?nRW@NN6Tl^K6i7IV?R`0
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 R94
 R95
 !i113 1
@@ -654,9 +654,9 @@ VW@GMgb]B=<MlVOlGRRM2i3
 !s100 A96?gLbg3Wafg>1JToSDm3
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/mux2x5.vhd|
 Z100 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/mux2x5.vhd|
 !i113 1
@@ -672,16 +672,16 @@ VX<YU9j_YZdE`4SWRfBNDM0
 !s100 S5PI4BU^V1Rh^m5JESWmC2
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 R99
 R100
 !i113 1
 R12
 R13
 Epc
-Z101 w1570918353
+Z101 w1571485458
 R1
 R2
 R3
@@ -694,9 +694,9 @@ VL1PS=`^7Dom5JHh`oiS8z0
 !s100 Vz;DIYb[AY;g5[laVME<e3
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 Z104 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/PC.vhd|
 Z105 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/PC.vhd|
 !i113 1
@@ -709,13 +709,13 @@ R3
 DEx4 work 2 pc 0 22 L1PS=`^7Dom5JHh`oiS8z0
 l23
 L19
-VUzYW9`i78`N2MlMFm>4a12
-!s100 388z6kk]iK:kWB?OLZ<be1
+VERgO4fHW?bXT[7<Ia`Bn91
+!s100 VF7nSCFhm<SzYI1KEfC?G2
 R7
 32
-R30
+R8
 !i10b 1
-R31
+R9
 R104
 R105
 !i113 1
@@ -735,9 +735,9 @@ VJiWAmLGUWmdVPB8L2QZ[D3
 !s100 9O>00CFElD4PLMkihiTWm3
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 Z109 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/RAM.vhd|
 Z110 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/RAM.vhd|
 !i113 1
@@ -754,9 +754,9 @@ VlKAe[nVc]`95aIkk6E7c73
 !s100 VQEPT7nfEmPYc^fXRTY[a0
 R7
 32
-R8
+R17
 !i10b 1
-R9
+R37
 R109
 R110
 !i113 1
@@ -776,11 +776,11 @@ VhQYRZ<6ijZW2:hk46k4IZ2
 !s100 _;mToXbZzY:WVO^oMIJ;J3
 R7
 32
-Z114 !s110 1571213347
+R17
 !i10b 1
-R9
-Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/register_file.vhd|
-Z116 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/register_file.vhd|
+R37
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/register_file.vhd|
+Z115 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/register_file.vhd|
 !i113 1
 R12
 R13
@@ -795,33 +795,33 @@ VWezko9NOBV=m<F61[i[:b3
 !s100 9E8aabHAeY8e@[==V;R>l1
 R7
 32
-R114
+R17
 !i10b 1
-R9
+R37
+R114
 R115
-R116
 !i113 1
 R12
 R13
 Erom
-Z117 w1571212262
+Z116 w1571212262
 R1
 R2
 R3
 R4
-Z118 8/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd
-Z119 F/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd
+Z117 8/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd
+Z118 F/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd
 l0
 L5
 V;HIY62b?IMTaL7>j?MTM@2
 !s100 ;HJP:4Pf6d9ca=B<]K[Bj1
 R7
 32
-R114
+R17
 !i10b 1
-Z120 !s108 1571213347.000000
-Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd|
-Z122 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd|
+R37
+Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd|
+Z120 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM.vhd|
 !i113 1
 R12
 R13
@@ -836,32 +836,32 @@ V2_dcN=Kn=BX6g3hWO]0Gd3
 !s100 2[aB_QaY_oRAnWE1>H;OO2
 R7
 32
-R114
+R17
 !i10b 1
+R37
+R119
 R120
-R121
-R122
 !i113 1
 R12
 R13
 Erom_block
-Z123 w1476134002
+Z121 w1476134002
 R2
 R3
 R4
-Z124 8/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd
-Z125 F/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd
+Z122 8/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd
+Z123 F/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd
 l0
 L42
 VCf[gZ]hQBZigaT1P:e9O01
 !s100 Fb1^C3b1G3KcM]0dFoPHV2
 R7
 32
-R114
+R17
 !i10b 1
-R120
-Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd|
-Z127 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd|
+R37
+Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd|
+Z125 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/ROM_Block.vhd|
 !i113 1
 R12
 R13
@@ -875,33 +875,33 @@ VZKBR7P0EaE;PJMf_Ho4411
 !s100 2O9W8o5<`cI7Pb0TBCEoL0
 R7
 32
-R114
+R17
 !i10b 1
-R120
-R126
-R127
+R37
+R124
+R125
 !i113 1
 R12
 R13
 Eshift_unit
-Z128 w1539187560
+Z126 w1539187560
 R1
 R2
 R3
 R4
-Z129 8/media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd
-Z130 F/media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd
+Z127 8/media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd
+Z128 F/media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd
 l0
 L5
 VoYz=ZP:Rg2U9Eb=ZGo>940
 !s100 C4@E7NN0:UB89P^MW405S0
 R7
 32
-R114
+R17
 !i10b 1
-R120
-Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd|
-Z132 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd|
+R37
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd|
+Z130 !s107 /media/sf_student/ArchOrd/Projet1/template/vhdl/shift_unit.vhd|
 !i113 1
 R12
 R13
@@ -909,48 +909,48 @@ Asynth
 R1
 R2
 R3
-Z133 DEx4 work 10 shift_unit 0 22 oYz=ZP:Rg2U9Eb=ZGo>940
+Z131 DEx4 work 10 shift_unit 0 22 oYz=ZP:Rg2U9Eb=ZGo>940
 l17
 L14
-Z134 VNOiOnk]_oCJDa8RHk=_0n1
-Z135 !s100 dC3RH_ngSNidhYJX18aNc2
+Z132 VNOiOnk]_oCJDa8RHk=_0n1
+Z133 !s100 dC3RH_ngSNidhYJX18aNc2
 R7
 32
-R114
+R17
 !i10b 1
-R120
-R131
-R132
+R37
+R129
+R130
 !i113 1
 R12
 R13
 Etb_controller
+R28
+R33
 R27
-R34
-R26
 R1
 R2
 R3
 R4
-Z136 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd
-Z137 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd
+Z134 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd
+Z135 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd
 l0
 L9
 V5[W5lV9lALk`VLfB7G@O[1
 !s100 QPYMI?@zF<fA]gVd9c[kS0
 R7
 32
-R30
+R8
 !i10b 1
-R31
-Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd|
-Z139 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd|
+R9
+Z136 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd|
+Z137 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_Controller.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R34
-R26
+R33
+R27
 R1
 R2
 R3
@@ -961,40 +961,40 @@ Vco=kRgU:DP_WHcBQJ_8332
 !s100 _WkzDDFBPd:3LHMWS[AoW2
 R7
 32
-R30
+R8
 !i10b 1
-R31
-R138
-R139
+R9
+R136
+R137
 !i113 1
 R12
 R13
 Etb_extend
+R28
+R33
 R27
-R34
-R26
 R2
 R3
 R4
-Z140 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd
-Z141 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd
+Z138 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd
+Z139 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd
 l0
 L8
 Vaaa357Ec4Z]hSVLzLa]`V0
 !s100 bW1ZJ800R3O0<C<7nO4h:1
 R7
 32
-R30
+R8
 !i10b 1
-R31
-Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd|
-Z143 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd|
+R9
+Z140 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd|
+Z141 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_Extend.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R34
-R26
+R33
+R27
 R2
 R3
 DEx4 work 9 tb_extend 0 22 aaa357Ec4Z]hSVLzLa]`V0
@@ -1004,11 +1004,11 @@ VSUC:NKCMTg8:IYKgIcGd30
 !s100 f><EEJh?:BbXgSC^g?0XG2
 R7
 32
-R30
+R8
 !i10b 1
-R31
-R142
-R143
+R9
+R140
+R141
 !i113 1
 R12
 R13
@@ -1017,8 +1017,8 @@ R45
 R2
 R3
 R4
-Z144 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd
-Z145 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd
+Z142 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd
+Z143 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd
 l0
 L4
 V5Tbz7Kl=147iIIz>>A8Y[3
@@ -1027,9 +1027,9 @@ R7
 32
 R8
 !i10b 1
-R31
-Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd|
-Z147 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd|
+R9
+Z144 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd|
+Z145 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_GECKO.vhd|
 !i113 1
 R12
 R13
@@ -1046,21 +1046,21 @@ R7
 32
 R8
 !i10b 1
-R31
-R146
-R147
+R9
+R144
+R145
 !i113 1
 R12
 R13
 Etb_ir
 R45
-R34
-R26
+R33
+R27
 R2
 R3
 R4
-Z148 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd
-Z149 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd
+Z146 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd
+Z147 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd
 l0
 L8
 VNa]DdS==`51QO9@9@NCYO3
@@ -1070,14 +1070,14 @@ R7
 R8
 !i10b 1
 R9
-Z150 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd|
-Z151 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd|
+Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd|
+Z149 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_IR.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R34
-R26
+R33
+R27
 R2
 R3
 DEx4 work 5 tb_ir 0 22 Na]DdS==`51QO9@9@NCYO3
@@ -1090,20 +1090,20 @@ R7
 R8
 !i10b 1
 R9
-R150
-R151
+R148
+R149
 !i113 1
 R12
 R13
 Etb_pc
 R45
-R34
-R26
+R33
+R27
 R2
 R3
 R4
-Z152 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd
-Z153 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd
+Z150 8/media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd
+Z151 F/media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd
 l0
 L8
 VZbiH9]DK4fmMF;^e8W7zF1
@@ -1113,14 +1113,14 @@ R7
 R8
 !i10b 1
 R9
-Z154 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd|
-Z155 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd|
+Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd|
+Z153 !s107 /media/sf_student/ArchOrd/Projet1/template/testbench/tb_PC.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R34
-R26
+R33
+R27
 R2
 R3
 DEx4 work 5 tb_pc 0 22 ZbiH9]DK4fmMF;^e8W7zF1
@@ -1133,8 +1133,8 @@ R7
 R8
 !i10b 1
 R9
-R154
-R155
+R152
+R153
 !i113 1
 R12
 R13

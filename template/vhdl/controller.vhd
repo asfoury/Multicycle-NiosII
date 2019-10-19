@@ -37,12 +37,14 @@ entity controller is
 end controller;
 
 architecture synth of controller is
-	TYPE stateType IS (FETCH1, FETCH2, DECODE, R_OP, I_OP, STORE, BREAK, LOAD1, LOAD2);
+	TYPE stateType IS (FETCH1, FETCH2, DECODE, R_OP, I_OP, STORE, BREAK, LOAD1, LOAD2, BRANCH);
 	SIGNAL s_cur_state, s_next_state : stateType;
 begin
 	op_alu <= "100001" WHEN op = "111010" and opx = "001110" else
 			  "110011" WHEN op= "111010"  and opx = "011011" else
-			  "000111" WHEN (op = "000100" or op="010111" or op = "010101")
+			  "000111" WHEN (op = "000100" or op="010111" or op = "010101") else
+			  -- corresponds to branch uncond instruction want to do the comp A==B so op_alu gets the compare op
+			  "011100" WHEN (op = "000110")
 		else "000000";
 	
 	dff : process(clk, reset_n) IS
@@ -67,6 +69,9 @@ begin
 		 if(op = "000100") THEN s_next_state <= I_OP; end if;
 		 if(op = "010111") THEN s_next_state <= LOAD1; end if;
 		 if(op = "010101") THEN s_next_state <= STORE; end if;
+		 -- add new states part 4 of project	
+		 if(op = "000110") THEN s_next_state <= BRANCH; end if;	
+		 --	
 		 if(op= "111010" and opx ="110100") THEN s_next_state <= BREAK; end if;
 		
 		WHEN LOAD1 => s_next_state <= LOAD2;
@@ -87,7 +92,7 @@ begin
 	imm_signed <= '1' WHEN s_cur_state = I_OP or s_cur_state = STORE or s_cur_state = LOAD1 ELSE '0';
 	rf_wren <= '1' WHEN s_cur_state = I_OP or s_cur_state = R_OP or s_cur_state = LOAD2 ELSE '0';
 	-- R_OP and STORE
-	sel_b <= '1' WHEN s_cur_state = R_OP  ELSE '0';
+	sel_b <= '1' WHEN s_cur_state = R_OP or s_cur_state = BRANCH ELSE '0';
 	sel_rC <= '1' WHEN s_cur_state = R_OP ELSE '0';
 	--LOAD1
 	sel_addr <= '1' WHEN s_cur_state = LOAD1 or s_cur_state = STORE ELSE '0';
@@ -97,9 +102,12 @@ begin
 	--STORE
 	write <= '1' WHEN s_cur_state = STORE  ELSE '0';
 	
+	-- new values that correspond to the branch instructions
+	branch_op <= '1' WHEN s_cur_state = BRANCH ELSE '0';
+	pc_add_imm <= '1' WHEN s_cur_state = BRANCH ELSE '0';
+	
 	-- all outputs that are not used will be given 0
-	branch_op <= '0';
-	pc_add_imm <= '0';
+	
     pc_sel_a  <= '0';
    	pc_sel_imm <= '0';
    	sel_pc    <= '0';

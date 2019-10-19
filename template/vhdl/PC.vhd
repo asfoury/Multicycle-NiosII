@@ -34,7 +34,8 @@ begin
 	END IF;
 END process dff;
 
-	s_16_bit_register_next <= std_logic_vector(unsigned(s_16_bit_register_cur) + 4);
+	s_16_bit_register_next <= std_logic_vector(unsigned(s_16_bit_register_cur) + 4) when add_imm ='0' 
+	else std_logic_vector(unsigned(s_16_bit_register_cur) + unsigned(imm)); -- not sure if sould be signed or unsigned think wont make a diffrence
 	addr <= "0000000000000000"&s_16_bit_register_cur;
 	
 	
